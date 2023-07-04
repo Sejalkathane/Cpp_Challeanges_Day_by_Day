@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+
 struct Node
 {
     int key;
@@ -102,7 +104,7 @@ int main()
     // cout<<search(root,20);
     // insert(root,40);
     deleteNode(root,3);
-    
+
 
 
     inorder(root);

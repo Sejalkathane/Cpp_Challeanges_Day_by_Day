@@ -14,6 +14,7 @@
         "unordered_map": "cpp",
         "unordered_set": "cpp",
         "new": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "vector": "cpp"
     }
 }

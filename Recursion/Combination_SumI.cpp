@@ -1,32 +1,43 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-// Input: n = 4, k = 2
-// Output: [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
-// Explanation: There are 4 choose 2 = 6 total combinations.
-// Note that combinations are unordered, i.e., [1,2] and [2,1] are considered to be the same combination.
-void find_combo(vector<vector<int>>res,vector<int>ds,int index,int n,int k)
+void find_combo(int index, int target, vector<int> &arr, vector<vector<int>> &ans, vector<int> &ds)
 {
-    if(ds.size()==k)
+    if (index == arr.size())
     {
-        res.push_back(ds);
+        if (target == 0)
+        {
+            ans.push_back(ds);
+        }
         return;
     }
 
-    for(int i=index;i<n;i++)
+    if (arr[index] <= target)
     {
-        ds.push_back(i+1);
-        find_combo(res,ds,i+1,n,k);
+        ds.push_back(arr[index]);
+        find_combo(index, target - arr[index], arr, ans, ds);
         ds.pop_back();
     }
+
+    find_combo(index + 1, target, arr, ans, ds);
 }
+
 int main()
 {
-    vector<vector<int>>res;
-    vector<int>ds;
-    
-    int n=4;
-    int k=2;
-    find_combo(res,ds,0,n,k);
-    return 0;
+    vector<int> arr = {2, 3, 5};
+    int target = 8;
+
+    vector<vector<int>> ans;
+    vector<int> ds;
+
+    find_combo(0, target, arr, ans, ds);
+
+    for (auto i : ans)
+    {
+        for ( auto j : i)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
 }

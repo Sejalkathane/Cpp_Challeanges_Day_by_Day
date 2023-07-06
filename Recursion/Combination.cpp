@@ -30,13 +30,13 @@ int main()
     int k = 2;
     find_combo(res, ds, 0, n, k);
     
-    for(int i=0;i<res.size();i++)
+   for (auto i : res)
     {
-        for(int j=0;j<res[0].size();j++)
+        for (auto j : i)
         {
-            cout<<res[i][j]<<" ";
+            cout << j << " ";
         }
+        cout << endl;
     }
-
     return 0;
 }

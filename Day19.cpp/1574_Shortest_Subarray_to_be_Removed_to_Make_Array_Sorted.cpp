@@ -21,7 +21,7 @@ int main()
         i++;
     }
     if (i == n - 1)
-        return 0;
+        {return 0;}
 
     // j point to n-1
     while (j > 0 && arr[j] >= arr[j - 1])
@@ -29,7 +29,7 @@ int main()
         j--;
     }
     if (j == 0)
-        return n - 1;
+        {return n - 1;}
 
     int result = min(n - i - 1, j);
     int a = 0, b = j;

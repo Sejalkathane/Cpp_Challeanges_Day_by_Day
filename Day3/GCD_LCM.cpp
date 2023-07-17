@@ -12,7 +12,7 @@ int gcd(int a, int b)
 
 int main()
 {
-    int a = 32, b = 44;
+    int a = 3, b = 1;
     // GCD :
 
     // while(a!=b)
@@ -29,6 +29,7 @@ int main()
     // cout<<a;
 
     cout << gcd(a, b)<<endl;
+    //Build_in functin in gcd::
 
 
 

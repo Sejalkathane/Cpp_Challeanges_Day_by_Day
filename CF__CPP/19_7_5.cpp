@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main()
 {
+    // your code goes here
     int t;
     cin >> t;
 
@@ -17,36 +19,45 @@ int main()
             cin >> arr[i];
         }
 
-        long long count[3] = {0}; // Stores the count of remainders when divided by 3
-        for (int i = 0; i < n; i++)
+        int i = 0;
+        int j = 0;
+        int sum = 0;
+        int k = 3;
+        int count = 0;
+        while (j < n)
         {
-            count[arr[i] % 3]++;
-        }
+            sum += arr[j];
 
-        // Calculate the number of increments required for each remainder type
-        long long target = n / 3;
-        long long moves = 0;
-
-        while (true)
-        {
-            int max_diff = max({count[0], count[1], count[2]}) - target;
-            if (max_diff == 0)
-                break;
-
-            for (int i = 0; i < 3; i++)
+            if (j - i + 1 < k)
             {
-                if (count[i] > target)
+                j++;
+            }
+            else if (j - i + 1 == k)
+            {
+                if (sum % 3 != 0)
                 {
-                    int next = (i + 1) % 3;
-                    int diff = count[i] - target;
-                    moves += diff;
-                    count[i] -= diff;
-                    count[next] += diff;
+                    int c = sum % 3;
+                    int d=3-c;
+                    arr[j] = arr[j]+d;
+                    int v=i;
+                    int w=j;
+                    sum=0;
+                    while(v<=j)
+                    {
+                        sum+=arr[v];
+                        v++;
+                    }
+                    count++;
                 }
+                else
+                {
+                 sum-=arr[i];
+                }
+                i++;
+                j++;
             }
         }
-
-        cout << moves << endl;
+        cout << count << endl;
     }
     return 0;
 }

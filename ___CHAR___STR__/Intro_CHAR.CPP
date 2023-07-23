@@ -4,20 +4,24 @@ using namespace std;
 int main()
 {
     // string s="Sejal";
-    string s = "xyz";
+    // string s = "xyz";
 
-    // move char one step ahead
+    // // move char one step ahead
 
-    // code xyz move k=4 bcd
-    int k = 5;
-    for (int i = 0; i < s.size(); i++)
-    {
-        s[i] = 'a' + (s[i] - 'a' + k) % 26; // imp
-    }
-    // s[i]-'a' will give usvalue between 0 to 25 ten add k
-    //  % will help us to give value between 0 25 then add in a to get small alphabet value
-    cout << s;
-    return 0;
+    // // code xyz move k=4 bcd
+    // int k = 5;
+    // for (int i = 0; i < s.size(); i++)
+    // {
+    //     s[i] = 'a' + (s[i] - 'a' + k) % 26; // imp
+    // }
+    // // s[i]-'a' will give usvalue between 0 to 25 ten add k
+    // //  % will help us to give value between 0 25 then add in a to get small alphabet value
+    // cout << s;
+    // return 0;
+
+    string s="EeOe";
+    sort(s.begin(),s.end());
+    cout<<s;
 }
 
 // Certainly! Let's break down the line `c = 'a' + (c - 'a' + shift) % 26;` step by step:

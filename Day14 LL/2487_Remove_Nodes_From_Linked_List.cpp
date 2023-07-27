@@ -45,7 +45,9 @@ Node *removeNodes(Node *head)
 
     Node *p = head;
     // int i=0;
-    Node *temp = new Node();
+    Node *temp = new Node(
+        
+    );
     temp->next = head;
     int n = v.size();
     for (int i = 0; i < n; i++)

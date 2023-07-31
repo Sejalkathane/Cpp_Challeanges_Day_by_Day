@@ -12,16 +12,36 @@ using namespace std;
 
 int main()
 {
-    int n=5;
-    for(int i=1;i<n;i++)
-    {
-        for(int j=1;j<n;j++)
-        {
+    // int n=5;
+    // for(int i=1;i<n;i++)
+    // {
+    //     for(int j=1;j<n;j++)
+    //     {
             
-            cout<<j<<"*";
+    //         cout<<j<<"*";
             
-        }
-        cout<<endl;
-    }
+    //     }
+    //     cout<<endl;
+    // }
     
+    vector<char>p={'S','d','h','a','j','m','e','k'};
+
+    int count = 0;
+
+
+    string v = "aeiouAEIOU"; // Vowel characters
+
+    for (char ch : p) {
+        // Check if the character is an alphabet
+        if (isalpha(ch)) {
+            // Check if the character is not a vowel
+            if (v.find(ch) == string::npos) {
+                count++;
+            }
+        }
+    }
+
+    cout<< count;
 }
+
+

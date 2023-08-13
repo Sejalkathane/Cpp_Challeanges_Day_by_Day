@@ -6,6 +6,8 @@ using namespace std;
 // Given a Directed Graph with V vertices (Numbered from 0 to V-1)
 // and E edges, check whether it contains any cycle or not.
 
+
+//idea:::: make two visited one is path and other is visted
 bool dfs(int node, int vis[], int path[], vector<int> adj[])
 {
     vis[node] = 1;

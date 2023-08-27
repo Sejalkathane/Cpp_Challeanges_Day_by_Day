@@ -1,9 +1,36 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
+int findJudge(int n, vector<vector<int>> &trust)
 {
-    
+    if (trust.size() == 0 && n == 1)
+    {
+        return 1;
+    }
+
+    vector<int> count(n + 1);
+
+    for (auto person : trust)
+    {
+        count[person[0]]--;
+        count[person[1]]++;
+    }
+
+    for (int person = 0; person < count.size(); person++)
+    {
+        if (count[person] == n - 1)
+            return person;
+    }
+
+    return -1;
+}
+
+int main()
+{      
+    vector<vector<int>>trust={{1,3},{2,3}};
+    int n=3;
+    cout<<findJudge(n,trust);
+
     return 0;
 }
 
@@ -22,8 +49,6 @@ int main()
 
 // Return the label of the town judge if the town judge exists and can be identified,
 //  or return -1 otherwise.
-
- 
 
 // Example 1:
 

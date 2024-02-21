@@ -1,6 +1,5 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-
 
 // You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
@@ -15,19 +14,34 @@ using namespace std;
 // Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
-
 int main()
 {
-    vector<int>prices={7,1,5,3,6,4};
-    int n=prices.size();
-    int buy=INT_MAX;
-    int sell=0;
+  vector<int> prices = {7, 1, 5, 3, 6, 4};
+  int n = prices.size();
 
-    for(int i=0;i<n;i++)
-    {
-      buy=min(buy,prices[i]);
-      sell=max(sell,prices[i]-buy);
-    }
-    cout<<sell;
-    
+  int buy=INT_MAX;
+  int sell=0;
+
+  for(int i=0;i<n;i++)
+  {
+    buy=min(buy,prices[i]);
+    sell=max(sell,prices[i]-buy);
+  }
+  cout<<sell;
+
+  // vector<vector<int>> res;
+  // for (int i = 0; i < n - 1; i++)
+  // {
+  //   if (prices[i] < prices[i + 1])
+  //     res.push_back({i, i + 1});
+  // }
+
+  // for (int i = 0; i < res.size(); i++)
+  // {
+  //   for (int j = 0; j < res[0].size(); j++)
+  //   {
+  //     cout<< res[i][j]<<" ";
+  //   }
+  //   cout<<endl;
+  // }
 }

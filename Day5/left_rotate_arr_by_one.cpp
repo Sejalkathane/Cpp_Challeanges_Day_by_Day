@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // 1 2 3 4 5
@@ -7,19 +7,17 @@ int main()
 {
     vector<int> arr = {1, 2, 4, 7, 7, 5};
     int n = arr.size();
-    
-    int a=arr[0];
 
-    for(int i=0;i<n-1;i++)
-    {
-         arr[i]=arr[i+1];
-    }
-    arr[n-1]=a;
+    int a = arr[0];
 
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        cout<<arr[i]<<" ";
+        arr[i] = arr[i + 1];
     }
-    
-    return 0;
+    arr[n - 1] = a;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
 }

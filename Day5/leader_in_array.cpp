@@ -6,7 +6,8 @@ int main()
 {
     // {7,10,4,3,6,5,2}
     //{10,20,30}
-    vector<int> arr = {30, 20, 10, 5, 2};
+    // vector<int> arr = {30, 20, 10, 5, 2};
+    vector<int> arr = {7, 10, 4, 3, 6, 5, 2};
     int n = arr.size();
 
     int mx = INT_MIN;

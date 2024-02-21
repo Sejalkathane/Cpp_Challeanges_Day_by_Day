@@ -23,6 +23,7 @@ void subseq(int index, vector<int> &ds, int arr[], int n)
     // pick move one by one
     subseq(index + 1, ds, arr, n);
     ds.pop_back();
+    
 
     // not pick condition  because we pop this not add into this
     subseq(index + 1, ds, arr, n);

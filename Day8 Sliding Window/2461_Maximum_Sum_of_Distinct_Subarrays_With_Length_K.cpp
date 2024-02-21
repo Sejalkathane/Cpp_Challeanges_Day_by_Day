@@ -15,7 +15,7 @@ int main()
 
     while (j < n)
     {
-        sum += nums[j];
+         sum += nums[j];
         mp[nums[j]]++;
 
         if (j - i + 1 == k)

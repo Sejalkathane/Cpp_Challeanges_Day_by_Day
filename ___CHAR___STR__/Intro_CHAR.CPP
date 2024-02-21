@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -70,3 +71,6 @@ int main()
 //    - Converted to ASCII: 'a' + 2 = 'c'
 
 // After applying the shift, the resulting string would be "abc". Therefore, when the input is "xyz" and the shift value is 3, the output would be "abc".
+
+
+
